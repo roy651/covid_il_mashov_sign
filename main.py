@@ -141,22 +141,6 @@ class TestInit():
       actions = ActionChains(self.driver)
       actions.move_to_element(element).perform()
 
-      # # 18 | click | css=.mat-icon-button:nth-child(1) svg | 
-      # wait.until(presence_of_element_located((By.CSS_SELECTOR, ".mat-icon-button:nth-child(1) svg")))
-      # print("18 Inside statement ... Waiting 1-3 sec before Switching user")
-      # time.sleep(random.uniform(1, 3)) 
-      # self.driver.find_element(By.CSS_SELECTOR, ".mat-icon-button:nth-child(1) svg").click()
-
-      # # 19 | mouseOver | css=.mat-menu-trigger:nth-child(1) | 
-      # element = self.driver.find_element(By.CSS_SELECTOR, ".mat-menu-trigger:nth-child(1)")
-      # actions = ActionChains(self.driver)
-      # actions.move_to_element(element).perform()
-
-      # # 20 | mouseOut | css=.mat-menu-trigger:nth-child(1) | 
-      # element = self.driver.find_element(By.CSS_SELECTOR, "body")
-      # actions = ActionChains(self.driver)
-      # actions.move_to_element(element).perform()
-
       # 21 | click | css=.mshv-student-dropdown-icon:nth-child(1) > svg | 
       wait.until(presence_of_element_located((By.CSS_SELECTOR, ".mshv-student-dropdown-icon:nth-child(1) > svg")))
       print("21 Inside statement ... Waiting 1-3 sec before click")
