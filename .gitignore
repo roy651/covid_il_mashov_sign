@@ -1,0 +1,6 @@
+creds
+*.log
+*.side
+chromedriver
+.vscode/
+.DS_Store
