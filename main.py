@@ -29,16 +29,16 @@ class TestInit():
     self.edu_school = edu_school
 
     options = Options()
-    options.headless = True
+    options.headless = False
 
     gecko_path = './geckodriver'
     if 'GECKODRIVER_PATH' in os.environ: 
       gecko_path = os.environ['GECKODRIVER_PATH']
     if 'FIREFOX_BIN' in os.environ: 
       binary = FirefoxBinary(os.environ['FIREFOX_BIN'])
-      self.driver = webdriver.Firefox(firefox_binary=binary, options=options, executable_path='./geckodriver')
+      self.driver = webdriver.Firefox(firefox_binary=binary, options=options, executable_path=gecko_path)
     else:
-      self.driver = webdriver.Firefox(options=options, executable_path='/Users/royabitbol/Downloads/temp/geckodriver')
+      self.driver = webdriver.Firefox(options=options, executable_path=gecko_path)
   
   def teardown(self):
     self.driver.quit()
@@ -203,7 +203,7 @@ class TestInit():
 
       return "Ended Successfully!!"
     except Exception as e: 
-      print("Error: ", str(e))
+      print("Error: ", type(e), " ", e.msg)
       return "Failed with error: " + str(e)
         
 
