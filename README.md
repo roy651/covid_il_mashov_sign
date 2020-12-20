@@ -15,8 +15,8 @@
         - MOE_PASS - your password to the above
         - MOE_SCHOOL - school code in the mashov system
     - Or pass them in CLI to the run command as in the example below
-- Note that this package includes the gecko driver to mac 
-    - If you need a windows/linux driver download it download it here: https://github.com/mozilla/geckodriver/releases
+- Note that this package includes the gecko driver to mac and linux
+    - If you need a windows driver download it here: https://github.com/mozilla/geckodriver/releases
     - Alternatively you can provide the path to the geckodriver on your os using env var GECKODRIVER_PATH
 - Also - you may specify the path to the firefox binary using FIREFOX_BIN
 
