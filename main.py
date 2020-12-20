@@ -251,7 +251,8 @@ else:
 
 il_holidays = holidays.Israel()
 day = datetime.datetime.today() 
-if day.weekday() < 6 and day not in il_holidays:
+# Don't run on friday, saturday and il-holidays
+if day.weekday() != 5 and day.weekday() != 4 and day not in il_holidays:
   test = TestInit()
   result = 'Test not run'
   test.setup(args[1], args[2], args[3], args[4], args[5]) #password)
