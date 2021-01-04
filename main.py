@@ -29,7 +29,7 @@ class TestInit():
     self.edu_school = edu_school
 
     options = Options()
-    options.headless = True
+    options.headless = False
 
     gecko_path = './geckodriver'
     if 'GECKODRIVER_PATH' in os.environ: 
@@ -107,13 +107,13 @@ class TestInit():
       time.sleep(random.uniform(1, 3)) 
       self.driver.find_element(By.CSS_SELECTOR, ".mat-button-wrapper > .ng-star-inserted").click()
 
-      # 12 | mouseOver | css=.ng-tns-c401-10:nth-child(3) > .mat-focus-indicator > .mat-button-wrapper > .mshv-menu-item | 
-      wait.until(presence_of_element_located((By.CSS_SELECTOR, ".ng-tns-c401-10:nth-child(3) > .mat-focus-indicator > .mat-button-wrapper > .mshv-menu-item")))
-      print("12 Post login ... Waiting 1-3 sec before moving to health statement")
-      time.sleep(random.uniform(1, 3)) 
-      element = self.driver.find_element(By.CSS_SELECTOR, ".ng-tns-c401-10:nth-child(3) > .mat-focus-indicator > .mat-button-wrapper > .mshv-menu-item")
-      actions = ActionChains(self.driver)
-      actions.move_to_element(element).perform()
+      # # 12 | mouseOver | css=.ng-tns-c401-10:nth-child(3) > .mat-focus-indicator > .mat-button-wrapper > .mshv-menu-item | 
+      # wait.until(presence_of_element_located((By.CSS_SELECTOR, ".ng-tns-c401-10:nth-child(3) > .mat-focus-indicator > .mat-button-wrapper > .mshv-menu-item")))
+      # print("12 Post login ... Waiting 1-3 sec before moving to health statement")
+      # time.sleep(random.uniform(1, 3)) 
+      # element = self.driver.find_element(By.CSS_SELECTOR, ".ng-tns-c401-10:nth-child(3) > .mat-focus-indicator > .mat-button-wrapper > .mshv-menu-item")
+      # actions = ActionChains(self.driver)
+      # actions.move_to_element(element).perform()
 
       # 13 | click | css=.splash-purple > .splash-header-text-large | 
       wait.until(presence_of_element_located((By.CSS_SELECTOR, ".splash-purple > .splash-header-text-large")))
