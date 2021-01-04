@@ -204,7 +204,7 @@ class TestInit():
       return "Ended Successfully!!"
     except Exception as e: 
       print("Error: ", type(e), " ", e.msg)
-      return "Failed with error: " + str(e)
+      return "Failed with error: " + type(e) + " " + e.msg
         
 
   def send_mail(self, msg):
