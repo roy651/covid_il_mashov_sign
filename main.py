@@ -29,7 +29,7 @@ class TestInit():
     self.edu_school = edu_school
 
     options = Options()
-    options.headless = False
+    options.headless = True
 
     gecko_path = './geckodriver'
     if 'GECKODRIVER_PATH' in os.environ: 
